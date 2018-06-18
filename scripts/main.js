@@ -10,6 +10,8 @@ const allTiles = document.querySelectorAll('.tile');
 const savedColor = document.querySelectorAll('.saved-color');
 const colorGenBtn = document.querySelector('.gen-color-btn');
 const saveBtn = document.querySelector('.save-color-btn');
+const errorContainer = document.querySelector('.error-container');
+const errorMsg = document.querySelector('.error-message');
 let clicked;
 let savedClicked;
 
@@ -23,15 +25,27 @@ colorGenBtn.addEventListener('click', () => {
 // Applies color to the palette
 saveBtn.addEventListener('click', () => {
     // Error handler
+    let errorMsg;
     if(clicked === undefined && savedClicked === undefined) { // if neither is selected
-        console.log('select a colour and a palette to save it to');
+        errorMsg = 'Please select a colour and a palette to save it to';
+        error(errorMsg);
     } else if (savedClicked === undefined) { // if no palette tab is selected
-        console.log('Please select a palette to save this color to');
+        errorMsg = 'Please select a palette to save this color to';
+        error(errorMsg);
     } else if (clicked === undefined) { // if no color is selected
-        console.log('please select a color to save to this palette');
+        errorMsg = 'Please select a color to save to this palette';
+        error(errorMsg);
     } else {
+        // check if palette tab has color saved
+            // if yes
+                // overwrite
+                    // yes - save color
+                    // no - return false
+
+            // if no
+                // save color
+
         savedClicked.style.backgroundColor = clicked.style.backgroundColor;
-        console.log('color saved!');
     }
 
 });
@@ -68,4 +82,13 @@ function genColor() {
     colorCode += aVal; 
     colorCode += ')';
     return colorCode;
+}
+
+function error(msg) {
+    errorMsg.textContent = msg;
+    errorContainer.classList.add('error-show');
+    setTimeout(() => {
+        errorContainer.classList.remove('error-show');
+    }, 7000);
+
 }

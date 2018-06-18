@@ -10,6 +10,38 @@
     margin: 50px auto;
 }
 
+.error-container {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* height: 200px; */
+    /* width: 200px; */
+    padding: 30px;
+    border: 1px solid black;
+    border-radius: 10%;
+    background-color: white;
+    z-index: -10;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.error-show {
+    z-index: 10;
+    opacity: 1 !important;
+}
+
+.heading {
+    text-align: center;
+    margin: 10px;
+}
+
+.error-message {
+    text-align: center;
+    line-height: 20px;
+    letter-spacing: 1px;
+}
+
 .tiles {
     width: 440px;
     height: 440px;
