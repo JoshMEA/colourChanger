@@ -26,7 +26,7 @@
     border: 1px solid green;
 }
 
-.code {
+.color-code, .saved-color-code {
     width: 300px;
     height: 30px;
     text-align: center;
@@ -58,7 +58,7 @@
     padding: 10px;
 }
 
-.save-palette-btn {
+.save-color-btn {
     height: 40px;
     width: 170px;
     margin: auto;
@@ -69,6 +69,10 @@
     width: 100px;
     height: 50px;
     margin: 10px 45%;
+}
+
+.clicked, .saved-clicked {
+    border: 5px solid black;
 }
 
 .select-tile {
