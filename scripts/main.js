@@ -30,20 +30,14 @@ allColors.forEach(tile => tile.addEventListener('click', () => {
 // functions
 
 //color generate function
-
 function genColor() {
     let colorCode = 'rgba(';
     for(let i = 0; i < 3; i++) {    // generates RGB code
         let num = Math.floor(Math.random() * 255) + 1;
         colorCode += num;
-        colorCode += ',';        
+        colorCode += ',';
     }
-
-    function aVal() {
-        let aVal = Math.random().toFixed(2);
-        aVal <= 0.4 ? aVal() : aVal;
-    }
-    // let aVal = Math.random().toFixed(2);
+    let aVal = (Math.random() * (1 - 0.3) + 0.3).toFixed(2); // Random float between 0.3 - 1
     colorCode += aVal; 
     colorCode += ')';
     return colorCode;
