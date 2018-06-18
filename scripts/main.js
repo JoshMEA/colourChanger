@@ -39,8 +39,11 @@ function genColor() {
         colorCode += ',';        
     }
 
-    let aVal = Math.random().toFixed(2);
-
+    function aVal() {
+        let aVal = Math.random().toFixed(2);
+        aVal <= 0.4 ? aVal() : aVal;
+    }
+    // let aVal = Math.random().toFixed(2);
     colorCode += aVal; 
     colorCode += ')';
     return colorCode;
