@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main-cont {
+    width: 700px;
+    height: 800px;
+    margin: 50px auto;
+}
+
+.tiles {
+    width: 440px;
+    height: 440px;
+    margin: 30px auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tile, .saved-color {
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    border-radius: 4px;
+    border: 1px solid green;
+}
+
+.code {
+    width: 300px;
+    height: 30px;
+    text-align: center;
+    padding: 5px;
+    border: 1px solid blue;
+    margin: auto;
+}
+
+.flex-cont {
+    display: flex;
+    margin: 20px auto;
+}
+
+.palette {
+    width: 440px;
+    display: flex;
+    margin: auto;
+}
+
+.btns {
+    width: 190px;
+}
+
+.gen-color-btn {
+    height: 50px;
+    width: 170px;
+    margin: auto;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.save-palette-btn {
+    height: 40px;
+    width: 170px;
+    margin: auto;
+    padding: 10px;
+}
+
+.info-btn {
+    width: 100px;
+    height: 50px;
+    margin: 10px 45%;
+}
+
+.select-tile {
+    border: 2px solid black;
+}
